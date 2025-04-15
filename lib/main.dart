@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoom_app/pages/home.dart';
 import 'package:zoom_app/pages/login.dart';
 import 'package:zoom_app/utils/colors.dart';
 
@@ -17,7 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      routes: {'/login': (context) => LoginPage()},
+      routes: {
+        '/login': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+      },
       home: const LoginPage(),
     );
   }
