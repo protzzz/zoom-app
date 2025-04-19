@@ -10,6 +10,8 @@ class AuthMethods {
   final FirebaseFirestore _firestore =
       FirebaseFirestore.instance; // initialization cloud storage
 
+  Stream<User?> get authChanges => _auth.authStateChanges();
+
   // func returns TRUE if autorization went well
   // context is for Exception error handling
   Future<bool> signInWithGoogle(BuildContext context) async {
